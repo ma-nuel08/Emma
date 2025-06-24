@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            width: 100%;
+            border-bottom: thin solid black;
+        }
+
+       
+        .top{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+            /* border: thin solid red; */
+            /* padding-left: 150px;/ */
+        }
+
+        .first{
+            display: flex;
+            gap: 20px;
+            padding-top: 50px;
+            /* border: thin solid black; */
+        }
+
+        .apply{
+            width: 100%;
+            height: 80vh;
+            background-image: linear-gradient(
+                to right,
+                rgba(231, 171, 61, 0.738),
+                rgba(70, 70, 235, 0.874)
+            ),url(/multimedia/);
+        /* border: thin solid red; */
+
+            
+        }
+        .ap{
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            border-color: white;
+            border-radius: 10px;
+        }
+        .apply-ch{
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+        /* border: thin solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+            /* gap: 30px; */
+        
+        }
+
+        .aply h1{
+            font-size: 65px;
+            color: white;
+            text-align: right;
+            /* border: thin solid black; */
+        }
+        .aply p{
+            text-align: right;
+            color: white;
+            margin: 20px 0 20px 0;
+            /* padding-right:150px ; */
+            /* padding-top: 20px; */
+            /* margin: 70px; */
+        }
+
+        .earn-ch{
+            width: 45%;
+            /* border: thin solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .earn h2{
+            font-size: 60px;
+            color: darkblue;
+        }
+        .earn-ch p{
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        .earn-pic{
+         width: 45%;
+        }
+        .earn-pic img{
+            width: 100%;
+        }
+
+        .earn{
+            width: 80%;
+            gap: 30px;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            
+            /* border: thin solid red; */
+
+        }
+        .earn-nf{
+            
+            /* gap: 100px; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            
+            /* border: thin solid red; */
+
+        }
+        hr{
+            margin: 30px 0 30px 0;
+        }
+
+        .ea button{
+            padding: 15px ;
+            border-radius: 20px;
+            background-color: darkblue;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .program{
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+            /* border: thin solid black; */
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+         .our h2{
+            font-size: 60px;
+            /* color: darkblue; */
+         }
+        .tech{
+            margin: 20px 0 20px 0;
+        }
+
+        .department{
+            width: 80%;
+            /* border: thin solid red; */
+            margin: auto;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .dep1{
+            width: 45%;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px 20px #f1f1f4;
+            /* border: thin solid blue; */
+
+        }
+
+        .dep1 img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .de{
+            line-height: 30px;
+            background-color: white;
+        }
+
+
+         .dep2{
+            width: 45%;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 20px 30px 20px 30px #f1f1f4;
+            /* border: thin solid blue; */
+
+        }
+
+        .dep2 img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .ep{
+            line-height: 30px;
+            background-color: white;
+        }
+
+         .study{
+            width: 80%;
+            /* border: thin solid red; */
+            margin: auto;
+            font-size: 20px;
+            margin-top: 30px;
+         }
+          .study h2{
+            font-size: 60px;
+          }
+
+          .sqi1{
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+            justify-content: space-between;
+          }
+          .sqi1 p{
+            opacity: 70%;
+          }
+
+          .facility{
+            width: 33.33%;
+          }
+          .skill{
+            width: 33.33%;
+          }
+          .job{
+            width: 33.33%;
+          }
+
+          .learning{
+            width: 33.33%;
+          }
+
+          .smarter{
+            width: 33%;
+          }
+
+          .practical{
+            width: 33.33%;
+          }
+
+          .sqi2{
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+            justify-content: space-between;
+          }
+
+            .sqi2 p{
+            opacity: 70%;
+          }
+
+
+          
+          /* .pro img{
+            width: 100%;
+            justify-content: center;
+            display: flex;
+          }
+          .pro{
+            border: thin solid red;
+          }
+
+          .ps{
+            width: 100%;
+          }
+
+          .pro h2{
+            margin: 200px;
+            font-size: 60px;
+          }
+
+          .pr button{
+            padding: 20px 20px;
+            border-radius: 20px;
+            color: white;
+            background-color: darkblue;
+          }
+          .pr{
+            margin: auto;
+            margin-top: -30px;
+            width: 40%;
+            gap: 100px;
+            display: flex;
+            border: thin solid red;
+          } */
+
+         
+
+
+
+          
+
+
+
+
+
+
+       
+                
+       
+
+
+
+
+       @media (max-width:950px) {
+        .first{
+            display: none; 
+
+        }
+        
+        
+         .apply{
+            width: 100%;
+            background-image: linear-gradient(
+                to right,
+                rgba(231, 171, 61, 0.738),
+                rgba(70, 70, 235, 0.874)
+            ),url(/multimedia/image/thoughtbot/SQI-CLASS-SHOT.jpg);
+
+  }
+
+            
+        }
+        @media (max-width: 900px) {
+
+            .apply-ch{
+            padding-top: 150px;
+
+            }
+            .aply h1{
+                font-size: 35px;
+            }
+            .aply p{
+                font-size: 14px;
+            }
+            
+         .earn-ch{
+            width: 100%;
+        }
+        .earn-nf{
+            display: block;
+
+        }
+        .earn-pic{
+            width: 100%;
+            margin-top: 20px;
+        }
+         .earn h2{
+            font-size: 35px;
+    
+        }
+        .earn-ch p{
+            font-size: 16px;
+        
+        }
+
+         .department{
+            width: 80%;
+            gap: 30px;
+            /* border: thin solid red; */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+
+        }
+
+            .dep1{
+            width: 100%;
+            /* box-shadow: 20px 30px 20px 30px cornsilk; */
+            /* border: thin solid blue; */
+
+        }
+
+         .dep2{
+            width: 100%;
+            /* box-shadow: 20px 30px 20px 30px cornsilk; */
+            /* border: thin solid blue; */
+
+
+       
+        }
+
+        .study{
+            width: 80%;
+            /* border: thin solid red; */
+            margin: auto;
+            font-size: 20px;
+            margin-top: 30px;
+         }
+
+         .sqi1{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            width: 100%;
+            gap: 50px;
+          }
+
+        .sqi2{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            width: 100%;
+            gap: 50px;
+          }
+
+            .facility{
+            width: 100%;
+          }
+          .skill{
+            width: 100%;
+          }
+          .job{
+            width: 100%;
+          }
+
+          .learning{
+            width: 100%;
+          }
+
+          .smarter{
+            width: 100%;
+          }
+
+          .practical{
+            width: 100%;
+          }
+
+
+        
+    }
+
+      
+       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="top">
+            <div class="first-pic">
+                <img src="
+                https://edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" alt="" width="100px">
+            </div> 
+     <div class="first">
+            <p>About</p>
+            <p>Programmes</p>
+            <p>Addmissions</p>
+            <p>E-portal</p>
+            <p>SQI Scholarship</p>
+            <p>News</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 2 -->
+     <div class="apply">
+        <div class="apply-ch">
+            <div class="aply">
+               <h1>The  <br> National Innovation <br> Diploma Program</h1>
+               <p>Real learning begins here</p>
+            </div>
+            <div><button class="ap"> Apply now!</button></div>
+        </div>
+         
+     </div>
+
+
+     <!-- section 3 -->
+    <div class="earn" >
+            <h2>Earn a Degree + Experience</h2>
+         <div class="earn-nf">
+            <div class="earn-ch">
+                <p>Earn your National Innovative Diploma (NID) in ICT and launch or advance your career with the in-demand skills to succeed in several high-growth industries. As a student in the program, you will achieve proficiency and real-life practical experience in your course of choice.</p>
+                <hr>
+                <p>
+                The National Innovation Diploma (NID) offered at SQI College of ICT is an approved academic program of National Board for Technical Education (NBTE) an important organ under the Nigerian Federal Ministry of Education. The National Innovation Diploma programme provides access to Technical and Vocational education in Nigeria.
+               </p>
+                  <div class="ea"><button>Addmission requirement</button></div>
+
+            </div>
+            <div class="earn-pic">
+                <img src="https://edu.sqi.ng/wp-content/uploads/2023/04/sqi-graduate.jpg" alt="">
+            </div>
+        </div>
+      </div>
+
+
+      <div class="program">
+        <div class="our">
+            <h2>Our Accredited Programs</h2>
+            <p class="tech">Our courses are broad and deep – giving you the skills to create future technology.</p>
+            <p>When students complete their academic studies, they are awarded the National Innovation Diploma which is equivalent to and conforms with the standard National Diploma certificates awarded in polytechnics and mono-technics in Nigeria.</p>
+            </div>
+            </div>
+
+            <div class="department">
+                <div class="dep1">
+                            <img src="https://edu.sqi.ng/wp-content/uploads/2023/05/software-developer.jpg" alt="">
+                            
+                            <div class="de">
+                                <h2>DEPARTMENT OF COMPUTER AND SOFTWARE ENGINEERING.</h2>
+                                <p>
+                                    SOFTWARE ENGINEERING.
+Web Application Development Option, Native Application Development Option, Cyber Security Option, Data Science/Analysis Option, Artificial Intelligence
+                                </p>
+                            </div>
+
+
+                   
+                </div>
+
+                                <div class="dep2">
+                            <img src="https://edu.sqi.ng/wp-content/uploads/2023/05/hardware-engineer.jpg" alt="">
+                            
+                            <div class="ep">
+                              <h2>
+                                DEPARTMENT OF COMPUTER AND HARDWARE ENGINEERING
+                              </h2>
+                                <p>
+                                    Robotics Engineering Option, Computer Hardware Engineering Option, Network Security Systems Option, Cloud/Server Administration Option, Internet of Things Option
+                                </p>
+                            </div>
+            </div>
+            </div>
+
+
+            <div class="study">
+                <p>Why study at sqi</p>
+                <h2>SQI Advantage</h2>
+
+
+                <div class="sqi1">
+                    <div class="facility">
+                        <h3>Facilities and Lecturers</h3>
+                    <p>World class facilities, seasoned lecturers and certified instructors</p>
+                </div>
+                <div class="skill">
+                    <h3>Acquire a tech skill</h3>
+                    <p>Acquire in-demand professional skills and certificate alongside your Diploma program</p>
+                </div>
+
+                <div class="job">
+                    <h3>Job Opportunity</h3>
+                    <p>78.5% of our students found secure employment within three months of graduation. Students leave from learning to getting job roles</p>
+                </div>
+                </div>
+
+
+                <div class="sqi2">
+                    <div class="learning">
+                        <h3>Conducive learning space</h3>
+                        <p>
+                            Enjoy uninterrupted learning and practical experience at our campuses.
+                        </p>
+                    </div>
+
+                    <div class="smarter">
+                        <h3>
+                            Learn the smarter and faster   way
+                        </h3>
+                        <p>
+                            Build real world projects that greatly enhance your portfolio and gives you a competitive edge
+                        </p>
+                    </div>
+
+                    <div class="practical">
+                        <h3>
+                            Purely practical
+                        </h3>
+                        <p>
+                            This course is practical, Hands-on learning. Practice and apply knowledge faster with real-world projects you can show off.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+       <!-- <div class="process">
+
+        <div class="pro">
+            <div class="ps">
+                 <h2>Begin your application process</h2>
+        <img src="/multimedia/financial-technology-31c-1-scaled.jpg" alt="">
+
+            </div>
+              
+           <div class="pr">
+            <button>start application</button>
+            <button>Admission Requirements</button>
+           </div> -->
+
+
+            
+        </div>
+       </div>    
+        
+      
+</body>
+</html>
